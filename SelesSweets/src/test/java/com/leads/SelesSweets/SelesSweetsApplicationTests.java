@@ -1,0 +1,13 @@
+package com.leads.SelesSweets;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class SelesSweetsApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
