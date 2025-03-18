@@ -1,0 +1,134 @@
+body {
+    font-family: 'Lilita One', Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    color: #6B4A2F;
+    font-size: 1.3rem;
+}
+
+.left {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30px;
+    justify-content: center;
+    transform: translateY(100%);
+    animation: slideDown 2s ease-out forwards;
+}
+
+.right {
+    background-image: url('/css/images/cool.jpg');
+    width: 100%;
+    background-size: cover;
+    transform: translateY(100%);
+    animation: slideUp 2s ease-out forwards;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-container form{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    background-color: rgba(247, 243, 233, 0.8);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.form-container form input{
+    padding: 10px;
+    font-family: 'Lilita One', Arial, sans-serif;
+    border: 1px solid #D3B38E;
+    border-radius: 5px;
+    max-width: 700px;
+    width: 20vw;
+    box-sizing: border-box;
+}
+
+.botao {
+    font-family: 'Lilita One', Arial, sans-serif;
+    display: block;
+    width: 20vw;
+    max-width: 700px;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #F2A65A;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+
+@media(max-width: 768px){
+    .left{
+        position: absolute;
+        width: 70%;
+        height: 50%;
+        z-index: 10;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        box-sizing: border-box;
+        padding: 30px;
+        border-radius: 10px;
+        background-color: #f2f2f2bd;
+    }
+
+    .form-container form input{
+        width: 50vw;
+        box-sizing: border-box;
+    }
+
+
+    .botao {
+        width: 50vw;
+    }
+
+}
+
+
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação Sele's Sweets</title>
+    <link rel="stylesheet" href="/css/pages/forms.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Pacifico&family=Lilita+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<section class="container-box">
+    <header class="container-titulo animated-item">
+        <h1 class="titulo">
+            Bem-vindo(a) ao Formulário de Avaliação da Sele's Sweet<span class="docinho">🍩</span>s!
+        </h1>
+        <a class="animated-item">
+            Estamos felizes por você estar aqui. Na Sele's Sweets, nossa maior alegria é proporcionar momentos doces e inesquecíveis para nossos clientes. Sua opinião é muito importante para nós e nos ajuda a melhorar continuamente nossos produtos e serviços.
+            Agradecemos pela confiança e por fazer parte da nossa história!
+        </a>
+    </header>
+
+    <form id="avaliacaoForm" action="/templates/forms/agradecimento.html" method="GET" class="animated-item">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <br>
+
+        <label for="idade">Idade:</label>
+        <input type="text" id="idade" name="idade" required>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone" required>
+        <br>
+
+        <label for="produtosAdquiridos">Produtos Adquiridos:</label>
+        <input list="produtos" id="produtosAdquiridos" name="produtosAdquiridos">
+        <datalist id="produtos">
+            <option value="Afogadinho de Brownie - Ninho com brigadeiro">
+            <option value="Afogadinho de Brownie - Ninho com Brigadeiro e Uva">
+            <option value="Afogadinho de Brownie- Prestigio">
+            <option value="Afogadinho de Brownie- Prestigio com Brigadeiro">
+            <option value="Bombom de Morango">
+            <option value="Bolo no Pote - Brigadeiro com Morango">
+            <option value="Bolo no Pote - Chocolatudo">
+            <option value="Bolo no Pote - Coco Gelado">
+            <option value="Bolo no pote - Prestígio">
+            <option value="Bolo no Pote- Doce de Leite com Coco">
+            <option value="Bolo no Pote- Ninho com brigadeiro">
+            <option value="Bolo no Pote- Ninho com morango">
+            <option value="Bolo no Pote- Ninho com Nutella">
+            <option value="Bolo no Pote- Surpresa de Uva">
+            <option value="Bolo no pote- Ninho com Uva">
+            <option value="Brownie Recheado com Ninho">
+            <option value="Coca-cola Original 200ml">
+            <option value="Coca-Cola sem açúcar 200ml">
+            <option value="Cone Trufado - Prestigio">
+            <option value="Copo Felicidade - Ninho com Nutella e Morango">
+            <option value="Copo Felicidade - Ninho com Nutella e Uva">
+            <option value="Marmitinha de Brownie">
+            <option value="Marmitinha de Brownie - Brigadeiro com Morango">
+            <option value="Marmitinha de Brownie- Ninho com Morango">
+            <option value="Marmitinha de Brownie- Prestígio">
+            <option value="Mimo da GI">
+            <option value="Pão de Mel - Brigadeiro">
+            <option value="Pão de Mel - Doce de Leite">
+            <option value="Pão de Mel- Brigadeiro">
+            <option value="Pote Ninho com Nutella e Morango">
+            <option value="Pote Ninho com Nutella e Uva">
+            <option value="Pote Prestígio com Morango">
+            <option value="Surpresa de Uva">
+        </datalist>
+        <button type="button" id="addProdutoButton" class="add-produto-button">Adicionar Produto</button>
+        <ul id="produtosList"></ul>
+        <br>
+
+        <label for="sabor">Sabor e Qualidade:</label>
+        <div class="rating">
+            <input type="radio" id="sabor1" name="sabor" value="1" required>1
+            <input type="radio" id="sabor2" name="sabor" value="2">2
+            <input type="radio" id="sabor3" name="sabor" value="3">3
+            <input type="radio" id="sabor4" name="sabor" value="4">4
+            <input type="radio" id="sabor5" name="sabor" value="5">5
+        </div>
+
+        <label for="variedadeProdutos">Variedade de Nossos Produtos:</label>
+        <div class="rating">
+            <input type="radio" id="variedadeProdutos1" name="variedadeProdutos" value="1" required>1
+            <input type="radio" id="variedadeProdutos2" name="variedadeProdutos" value="2">2
+            <input type="radio" id="variedadeProdutos3" name="variedadeProdutos" value="3">3
+            <input type="radio" id="variedadeProdutos4" name="variedadeProdutos" value="4">4
+            <input type="radio" id="variedadeProdutos5" name="variedadeProdutos" value="5">5
+        </div>
+
+        <label for="qualidadeAtendimento">Qualidade de Nosso Atendimento:</label>
+        <div class="rating">
+            <input type="radio" id="qualidadeAtendimento1" name="qualidadeAtendimento" value="1" required>1
+            <input type="radio" id="qualidadeAtendimento2" name="qualidadeAtendimento" value="2">2
+            <input type="radio" id="qualidadeAtendimento3" name="qualidadeAtendimento" value="3">3
+            <input type="radio" id="qualidadeAtendimento4" name="qualidadeAtendimento" value="4">4
+            <input type="radio" id="qualidadeAtendimento5" name="qualidadeAtendimento" value="5">5
+        </div>
+
+        <label for="entrega">Entrega:</label>
+        <div class="rating">
+            <input type="radio" id="entrega1" name="entrega" value="1" required>1
+            <input type="radio" id="entrega2" name="entrega" value="2">2
+            <input type="radio" id="entrega3" name="entrega" value="3">3
+            <input type="radio" id="entrega4" name="entrega" value="4">4
+            <input type="radio" id="entrega5" name="entrega" value="5">5
+        </div>
+        <br>
+
+        <label for="gostar">O que você mais gostou?</label>
+        <input type="text" id="gostar" name="gostar" required>
+        <br>
+
+        <label for="melhorias">Do seu ponto de vista, o que podemos melhorar?</label>
+        <input type="text" id="melhorias" name="melhorias" required>
+        <br>
+
+
+        <h1>Consentimento e privacidade</h1>
+        <div class="checkbox-group">
+            <label for="feedback">
+                Autorização para uso de feedback em materiais para maior qualidade e performance:
+            </label>
+            <input type="checkbox" id="feedback" name="feedback" required> Autorizo o uso do meu feedback em materiais destinados a aprimorar a qualidade e a performance dos produtos e serviços.
+        </div>
+
+        <div class="checkbox-group">
+            <label for="promocoes">
+                Consentimento para receber comunicações de futuras promoções:
+            </label>
+            <input type="checkbox" id="promocoes" name="promocoes" required> Autorizo o recebimento de comunicações sobre futuras promoções.
+        </div>
+
+        <button type="submit" class="submit-button">Enviar Formulário</button>
+    </form>
+
+    <footer class="rodape">
+        <a href="https://www.linkedin.com/in/lucas-freitas-7a2238241/" target="_blank" class="link_rodape">
+            © 2024 Lucas Freitas. Todos os direitos reservados. Conecte-se conosco😉
+        </a>
+    </footer>
+</section>
+
+<script>
+    // ouvinte de evento que dispara quando o DOM está completamente carregado
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('avaliacaoForm');
+
+        // ouvinte de evento para o envio do formulário
+        form.addEventListener('submit', function (event) {
+            // Prevê comportamento padrão do formulário (não recarrega a página)
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const idade = document.getElementById('idade').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+
+            //Constrói a query string com os valores dos campos, codificados para URL
+            const queryParams = `?nome=${encodeURIComponent(nome)}&idade=${encodeURIComponent(idade)}&email=${encodeURIComponent(email)}&telefone=${encodeURIComponent(telefone)}`;
+
+            // Redirecionar para a página de agradecimento com os parâmetros na URL
+            window.location.href = `${form.getAttribute('action')}${queryParams}`;
+        });
+
+        // Obtém os elementos do botão de adicionar produto, input de produtos adquiridos e lista de produtos
+        const addProdutoButton = document.getElementById('addProdutoButton');
+        const produtosAdquiridosInput = document.getElementById('produtosAdquiridos');
+        const produtosList = document.getElementById('produtosList');
+
+        // ouvinte de evento ao botão de adicionar produto
+        addProdutoButton.addEventListener('click', function () {
+            const produtoValue = produtosAdquiridosInput.value.trim();
+
+            if (produtoValue) {
+                // cria novo elemento de lista e define seu conteúdo como o valor do produto
+                const li = document.createElement('li');
+                li.textContent = produtoValue;
+
+                // cria botão de remoção e define seu conteúdo como 'X'
+                const removeButton = document.createElement('span');
+                removeButton.textContent = 'X';
+                removeButton.classList.add('remove-button');
+
+                // ouvinte de evento ao botão de remoção para remover o item da lista
+                removeButton.addEventListener('click', function () {
+                    produtosList.removeChild(li);
+                });
+
+                // adiciona botão de remoção ao item da lista e o item da lista à lista de produtos
+                li.appendChild(removeButton);
+                produtosList.appendChild(li);
+
+                // limpa o valor do input de produtos adquiridos
+                produtosAdquiridosInput.value = '';
+            }
+        });
+
+        // obtém todos elementos com classe 'animated-item'
+        const animatedItems = document.querySelectorAll('.animated-item');
+
+        // adiciona classe 'show' para cada item animado após pequeno atraso
+        animatedItems.forEach((item, index) => {
+            setTimeout(() => {
+                item.classList.add('show');
+            }, index * 300); // ajusta o intervalo de atraso
+        });
+    });
+</script>
+
+</body>
+</html>
