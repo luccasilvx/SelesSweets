@@ -10,9 +10,10 @@ import java.util.List;
 
 @Repository
 public interface EvaluationRepository extends JpaRepository<Evaluation, Long> {
-    @Query("SELECT e.purchasedProducts AS purchased_products, e.flavorQuality AS flavor_quality, " +
-            "e.productVariety AS product_variety, e.serviceQuality AS service_quality, " +
-            "e.deliveryRating AS delivery_rating, e.favoriteAspect AS favorite_aspect, " +
-            "e.improvementSuggestion AS improvement_suggestion FROM Evaluation e")
+
+    @Query("SELECT e.purchased_products AS purchased_products, e.flavor_quality AS flavor_quality, " +
+            "e.product_variety AS product_variety, e.service_quality AS service_quality, " +
+            "e.delivery_rating AS delivery_rating, e.favorite_aspect AS favorite_aspect, " +
+            "e.improvement_suggestion AS improvement_suggestion FROM Evaluation e")
     List<EvaluationProjection> findAllEvaluations();
 }

@@ -10,8 +10,16 @@ import java.util.List;
 @Service
 public class DashboardService {
 
-    @Autowired
-    private EvaluationRepository evaluationRepository;
 
-    public List<EvaluationProjection> projectionList = this.evaluationRepository.findAllEvaluations();
+    private final EvaluationRepository evaluationRepository;
+
+    public DashboardService(EvaluationRepository evaluationRepository) {
+        this.evaluationRepository = evaluationRepository;
+    }
+
+    public List<EvaluationProjection> getProjectionList(){
+        return evaluationRepository.findAllEvaluations();
+    }
+
+
 }

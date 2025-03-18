@@ -6,8 +6,6 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
-import java.util.List;
-
 @Entity
 @Data
 @Table(name = "Evaluation")
@@ -22,7 +20,7 @@ public class Evaluation {
     @Size(min = 3, max = 50)
     private String name;
 
-    @NotBlank
+    @Size(min = 1,max = 100)
     private int age;
 
     @NotBlank
@@ -35,22 +33,22 @@ public class Evaluation {
     @NotBlank
     private String purchased_products;
 
-    @NotBlank
+    @Size(min = 1,max = 5)
     private int flavor_quality;
 
-    @NotBlank
+    @Size(min = 1,max = 5)
     private int product_variety;
 
-    @NotBlank
+    @Size(min = 1,max = 5)
     private int service_quality;
 
-    @NotBlank
+    @Size(min = 1,max = 5)
     private int delivery_rating;
 
-    @NotBlank
+    @Size(min = 1,max = 5)
     private String favorite_aspect;
 
-    @NotBlank
+    @Size(min = 1,max = 5)
     private String improvement_suggestion;
 
     public Long getId() {
