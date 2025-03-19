@@ -28,7 +28,7 @@ public class DashboardController {
         return ResponseEntity.ok(dashboardServiceservice.getProjectionList());
     }
 
-    @GetMapping("/user")
+    @GetMapping("/user/{id}")
     public ResponseEntity<User> finById(@PathVariable Long id){
         var user = userService.findById(id);
         return ResponseEntity.ok(user);
