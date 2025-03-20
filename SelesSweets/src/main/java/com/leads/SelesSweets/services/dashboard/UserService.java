@@ -1,6 +1,6 @@
 package com.leads.SelesSweets.services.dashboard;
 
-import com.leads.SelesSweets.models.User;
+import com.leads.SelesSweets.models.Users;
 import com.leads.SelesSweets.models.projection.UserProjection;
 import com.leads.SelesSweets.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ public class UserService implements UserProjection {
 
 
     @Override
-    public User create(User userToCreate) {
+    public Users create(Users userToCreate) {
         if (repository.existsByEmail(userToCreate.getEmail())){
             throw new IllegalArgumentException("This account Email already exists. ");
         }
@@ -24,7 +24,7 @@ public class UserService implements UserProjection {
     }
 
     @Override
-    public User findById(Long id) {
+    public Users findById(Long id) {
         return repository.findById(id).orElseThrow(NoSuchElementException::new);
     }
 }

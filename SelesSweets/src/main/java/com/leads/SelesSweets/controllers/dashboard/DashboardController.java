@@ -1,6 +1,6 @@
 package com.leads.SelesSweets.controllers.dashboard;
 
-import com.leads.SelesSweets.models.User;
+import com.leads.SelesSweets.models.Users;
 import com.leads.SelesSweets.models.projection.EvaluationProjection;
 import com.leads.SelesSweets.services.dashboard.DashboardService;
 import com.leads.SelesSweets.services.dashboard.UserService;
@@ -29,7 +29,7 @@ public class DashboardController {
     }
 
     @GetMapping("/user/{id}")
-    public ResponseEntity<User> finById(@PathVariable Long id){
+    public ResponseEntity<Users> finById(@PathVariable Long id){
         var user = userService.findById(id);
         return ResponseEntity.ok(user);
     }

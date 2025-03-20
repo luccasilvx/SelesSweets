@@ -1,8 +1,8 @@
 package com.leads.SelesSweets.models.projection;
 
-import com.leads.SelesSweets.models.User;
+import com.leads.SelesSweets.models.Users;
 
 public interface UserProjection {
-    User create(User userToCreate);
-    User findById(Long id);
+    Users create(Users userToCreate);
+    Users findById(Long id);
 }
