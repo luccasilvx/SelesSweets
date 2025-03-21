@@ -40,6 +40,11 @@ public class Users implements UserDetails {
 
     private UserRole role;
 
+    public Users(String username, String password, UserRole role) {
+        this.username = username;
+        this.password = password;
+        this.role = role;
+    }
 
     @Override
     public boolean isAccountNonExpired() {
