@@ -1,10 +1,10 @@
 package com.leads.SelesSweets.controllers.auth;
 
 import com.leads.SelesSweets.infra.security.TokenService;
-import com.leads.SelesSweets.models.AuthenticationDTO;
-import com.leads.SelesSweets.models.LoginResponseDTO;
+import com.leads.SelesSweets.models.DTO.AuthenticationDTO;
+import com.leads.SelesSweets.models.DTO.LoginResponseDTO;
 import com.leads.SelesSweets.models.Users;
-import com.leads.SelesSweets.models.projection.RegisterDTO;
+import com.leads.SelesSweets.models.DTO.RegisterDTO;
 import com.leads.SelesSweets.repositories.UserRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +40,7 @@ public class AuthenticationController {
 
     @PostMapping("/register")
     public ResponseEntity register(@RequestBody @Valid RegisterDTO dto){
-        if (this.repository.findByUsername(dto.username() != null)) {
+        if (this.repository.findByUsername(dto.username()) != null) {
             return ResponseEntity.badRequest().build();
         }
         String encryptedPassword = new BCryptPasswordEncoder().encode(dto.password());

@@ -1,4 +1,4 @@
-package com.leads.SelesSweets.models.projection;
+package com.leads.SelesSweets.models.DTO;
 
 import com.leads.SelesSweets.models.UserRole;
 
